@@ -1,0 +1,24 @@
+server:
+  port: 27001
+  servlet:
+    context-path: /yandex-speller-adapter
+
+spring:
+  application:
+    name: yandex-speller-adapter
+
+  jackson:
+    default-property-inclusion: NON_NULL
+    deserialization:
+      fail-on-unknown-properties: false
+    serialization:
+      indent-output: false
+
+  main:
+    banner-mode: log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health"
