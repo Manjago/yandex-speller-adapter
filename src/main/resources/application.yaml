@@ -22,3 +22,9 @@ management:
     web:
       exposure:
         include: "health"
+
+logbook:
+  format:
+    style: http
+  write:
+    level: info
