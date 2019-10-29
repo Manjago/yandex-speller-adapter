@@ -2,6 +2,7 @@ package com.github.manjago.yandexspelleradapter.backend
 
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.github.manjago.yandexspelleradapter.logic.TextFixer
 import org.springframework.stereotype.Service
 import java.net.URI
 import java.net.URLEncoder
@@ -14,8 +15,7 @@ import java.nio.charset.StandardCharsets
 
 @Service
 class YandexSpellerService(private val httpClient: HttpClient,
-                           objectMapper: ObjectMapper
-) {
+                           objectMapper: ObjectMapper) {
 
     private val tr = object : TypeReference<List<SpellerResponseItem>>() {}
     private val reader = objectMapper.readerFor(tr)
