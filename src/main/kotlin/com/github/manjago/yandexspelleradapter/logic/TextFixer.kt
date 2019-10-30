@@ -2,9 +2,10 @@ package com.github.manjago.yandexspelleradapter.logic
 
 import com.github.manjago.yandexspelleradapter.backend.SpellerResponseItem
 import mu.KotlinLogging
+import org.springframework.stereotype.Component
 import org.springframework.stereotype.Service
 
-@Service
+@Component
 class TextFixer {
     fun fixText(original: String, advices: List<SpellerResponseItem>): String {
 
